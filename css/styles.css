@@ -522,15 +522,24 @@ p { color: var(--gray-600); line-height: 1.7; }
 .mobile-bar-item svg { width: 20px; height: 20px; }
 .mobile-bar-item:hover, .mobile-bar-item.active { color: var(--green-400); }
 
-/* === SERVICE PAGE HERO (smaller) === */
+/* === SERVICE PAGE HERO (with background image) === */
 .page-hero {
-  padding: 48px 0; background: var(--navy); color: var(--white);
+  padding: 70px 0 80px; color: var(--white);
   position: relative; overflow: hidden;
+  background-size: cover; background-position: center center;
+  background-repeat: no-repeat; background-color: var(--navy);
+  min-height: 380px; display: flex; align-items: center;
 }
-.page-hero::before {
-  content: ''; position: absolute; top: -30%; right: -10%;
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(0,112,60,0.15) 0%, transparent 70%); border-radius: 50%;
+.page-hero .hero-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(15,15,15,0.90) 0%,
+    rgba(25,25,25,0.78) 40%,
+    rgba(35,35,35,0.50) 75%,
+    rgba(40,40,40,0.35) 100%
+  );
+  z-index: 1;
 }
 .page-hero .container { position: relative; z-index: 2; }
 .page-hero .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
