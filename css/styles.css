@@ -606,6 +606,7 @@ p { color: var(--gray-600); line-height: 1.7; }
   .status-ctas { display: none; }
   .nav { display: none; }
   .mobile-menu-btn { display: block; }
+  .header-actions .btn { display: none; }
   .nav.active {
     display: flex; flex-direction: column; position: fixed;
     top: 68px; left: 0; right: 0; background: var(--navy);
