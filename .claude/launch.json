@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "watkins-plumbing",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "3456", "--directory", "/Users/donsmith/Documents/claude and Don/projects/watkins-plumbing-repo"],
+      "port": 3456
+    }
+  ]
+}
