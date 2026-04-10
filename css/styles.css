@@ -655,3 +655,13 @@ p { color: var(--gray-600); line-height: 1.7; }
 .anim.visible { animation: fadeUp 0.5s ease forwards; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* === ABOUT & CONTACT PAGE RESPONSIVE === */
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr !important; }
+  .contact-cards { grid-template-columns: 1fr 1fr !important; }
+  .service-area-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 480px) {
+  .contact-cards { grid-template-columns: 1fr !important; }
+}
