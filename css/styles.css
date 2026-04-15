@@ -507,7 +507,11 @@ p { color: var(--gray-600); line-height: 1.7; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 36px; }
 .footer-brand img { height: 34px; margin-bottom: 12px; filter: brightness(0) invert(1); }
 .footer-brand p { font-size: 0.85rem; line-height: 1.6; margin-bottom: 10px; }
-.footer-brand .license { color: var(--green-400); font-weight: 700; font-size: 0.82rem; }
+.footer-brand .license { color: var(--green-400); font-weight: 700; font-size: 0.82rem; margin-bottom: 12px; }
+.footer-social { display: flex; gap: 12px; }
+.footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); transition: all 0.3s; }
+.footer-social a:hover { background: var(--green-400); color: var(--white); }
+.footer-social svg { width: 18px; height: 18px; }
 .footer h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; color: rgba(255,255,255,0.7); }
 .footer ul li { margin-bottom: 6px; }
 .footer ul a { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
