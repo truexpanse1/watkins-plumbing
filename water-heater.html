@@ -35,22 +35,36 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "Plumber",
+    "@id": "https://watkinsplumbing.net/#business",
+    "name": "Watkins Plumbing Inc.",
+    "image": "https://watkinsplumbing.net/images/logo.png",
+    "logo": "https://watkinsplumbing.net/images/logo.png",
+    "url": "https://watkinsplumbing.net/",
+    "telephone": "+15303437770",
+    "email": "watkinsplbg@gmail.com",
+    "address": {"@type": "PostalAddress","streetAddress": "2704 Hegan Ln, Suite #126","addressLocality": "Chico","addressRegion": "CA","postalCode": "95928","addressCountry": "US"},
+    "geo": {"@type": "GeoCoordinates","latitude": 39.7042543,"longitude": -121.8218215},
+    "openingHoursSpecification": {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens": "00:00","closes": "23:59"},
+    "areaServed": ["Chico","Oroville","Paradise","Gridley","Durham","Magalia","Biggs","Yuba City","Marysville","Red Bluff","Corning","Willows","Orland","Colusa"],
+    "priceRange": "$$",
+    "sameAs": ["https://www.facebook.com/watkinsplbg/","https://www.instagram.com/watkinsplbg/"]}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Water Heater Repair & Installation",
-    "provider": {
-      "@type": "Plumber",
-      "name": "Watkins Plumbing Inc.",
-      "telephone": "+15303437770",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2704 Hegan Ln, Suite #126",
-        "addressLocality": "Chico",
-        "addressRegion": "CA",
-        "postalCode": "95928"
-      }
-    },
-    "areaServed": "Chico, CA",
-    "description": "Expert water heater repair and installation in Chico CA. Traditional and tankless units serviced."
+    "name": "Water Heater Repair & Installation in Chico CA",
+    "serviceType": "Water Heater Repair and Installation",
+    "url": "https://watkinsplumbing.net/water-heater",
+    "provider": {"@id": "https://watkinsplumbing.net/#business"},
+    "areaServed": [
+      {"@type": "City","name": "Chico"},
+      {"@type": "City","name": "Oroville"},
+      {"@type": "City","name": "Paradise"},
+      {"@type": "AdministrativeArea","name": "Butte County, CA"}
+    ],
+    "description": "Expert water heater repair and installation in Chico, Oroville, and Paradise CA. Traditional tank and tankless units serviced. Same-day emergency service, upfront pricing."
   }
   </script>
   <script type="application/ld+json">

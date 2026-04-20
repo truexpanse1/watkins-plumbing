@@ -35,24 +35,36 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "Plumber",
+    "@id": "https://watkinsplumbing.net/#business",
+    "name": "Watkins Plumbing Inc.",
+    "image": "https://watkinsplumbing.net/images/logo.png",
+    "logo": "https://watkinsplumbing.net/images/logo.png",
+    "url": "https://watkinsplumbing.net/",
+    "telephone": "+15303437770",
+    "email": "watkinsplbg@gmail.com",
+    "address": {"@type": "PostalAddress","streetAddress": "2704 Hegan Ln, Suite #126","addressLocality": "Chico","addressRegion": "CA","postalCode": "95928","addressCountry": "US"},
+    "geo": {"@type": "GeoCoordinates","latitude": 39.7042543,"longitude": -121.8218215},
+    "openingHoursSpecification": {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens": "00:00","closes": "23:59"},
+    "areaServed": ["Chico","Oroville","Paradise","Gridley","Durham","Magalia","Biggs","Yuba City","Marysville","Red Bluff","Corning","Willows","Orland","Colusa"],
+    "priceRange": "$$",
+    "sameAs": ["https://www.facebook.com/watkinsplbg/","https://www.instagram.com/watkinsplbg/"]}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Toilet, Faucet, and Sink Repair",
-    "provider": {
-      "@type": "Plumber",
-      "name": "Watkins Plumbing Inc.",
-      "telephone": "+15303437770",
-      "email": "watkinsplbg@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2704 Hegan Ln, Suite #126",
-        "addressLocality": "Chico",
-        "addressRegion": "CA",
-        "postalCode": "95928",
-        "addressCountry": "US"
-      }
-    },
-    "areaServed": "Chico, CA",
-    "description": "Professional toilet, faucet, sink, garbage disposal, and shower valve repair and installation services."
+    "name": "Toilet, Faucet & Sink Repair in Chico CA",
+    "serviceType": "Toilet, Faucet, Sink & Garbage Disposal Repair",
+    "url": "https://watkinsplumbing.net/toilets-faucets",
+    "provider": {"@id": "https://watkinsplumbing.net/#business"},
+    "areaServed": [
+      {"@type": "City","name": "Chico"},
+      {"@type": "City","name": "Oroville"},
+      {"@type": "City","name": "Paradise"},
+      {"@type": "AdministrativeArea","name": "Butte County, CA"}
+    ],
+    "description": "Running toilet repair, leaky faucet fix, garbage disposal and shower valve installation in Chico and Butte County. Delta, Moen, and Kohler certified."
   }
   </script>
   <script type="application/ld+json">
