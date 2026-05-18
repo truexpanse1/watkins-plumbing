@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>No Hot Water in Chico? Don't Replace It Yet — Watkins Plumbing</title>
+<meta name="description" content="Cold shower this morning? Most 'dead' water heaters in Chico aren't. We diagnose before you replace. 30 years in Chico. 1-yr parts &amp; labor install warranty. No upsell. CSLB #727962. Call (530) 343-7770." />
+<link rel="canonical" href="https://watkinsplumbing.net/water-heater-quote" />
+<meta name="robots" content="noindex, follow" />
+
+<meta property="og:title" content="No Hot Water in Chico? Don't Replace It Yet — Watkins Plumbing" />
+<meta property="og:description" content="Most 'dead' water heaters can be repaired for $189. We diagnose first. 30 years in Chico. No upsell. Period." />
+<meta property="og:image" content="https://watkinsplumbing.net/images/hero-water-heater.jpg" />
+<meta property="og:url" content="https://watkinsplumbing.net/water-heater-quote" />
+<meta property="og:type" content="website" />
+
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --brand: #00703C;
+    --brand-dark: #005028;
+    --navy: #1B2A4A;
+    --navy-dark: #0F1A30;
+    --yellow: #fbbf24;
+    --orange: #f97316;
+    --red: #ef4444;
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
+    --bg-card: #ffffff;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: var(--bg);
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--brand); text-decoration: none; }
+
+  /* ── URGENCY BAR ── */
+  .urgency-bar {
+    background: var(--red);
+    color: #fff;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .urgency-bar strong { font-weight: 900; }
+  @media (max-width: 600px) { .urgency-bar { font-size: 12px; } }
+
+  /* ── STICKY PHONE BAR (mobile-first) ── */
+  .stickyphone {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--navy);
+    color: #fff;
+    padding: 10px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .stickyphone__brand { display: flex; align-items: center; gap: 10px; }
+  .stickyphone__brand img { height: 32px; }
+  .stickyphone__brand-text { font-size: 12px; line-height: 1.2; }
+  .stickyphone__brand-text strong { display: block; font-weight: 800; font-size: 14px; }
+  .stickyphone__brand-text span { color: rgba(255,255,255,0.7); font-size: 11px; }
+  .stickyphone__cta {
+    background: var(--brand);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 15px;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.2s;
+    border: 2px solid rgba(255,255,255,0.15);
+  }
+  .stickyphone__cta:hover { background: var(--brand-dark); transform: translateY(-1px); }
+  @media (max-width: 480px) { .stickyphone__brand-text { display: none; } }
+
+  /* ── HERO — full-hero gradient overlay over van photo ──
+     Light tint at top so the van + Chico home stay visible; ramps
+     darker down so the bottom-anchored copy reads cleanly.
+     Logo wordmark is white in the dark-hero variant (both WATKINS and
+     PLUMBING) so it stays readable at any vertical position regardless
+     of how dark the gradient is at that exact spot. */
+  .hero {
+    position: relative;
+    min-height: 88vh;
+    background:
+      linear-gradient(180deg,
+        rgba(15, 26, 48, 0.15) 0%,
+        rgba(15, 26, 48, 0.30) 30%,
+        rgba(15, 26, 48, 0.70) 55%,
+        rgba(15, 26, 48, 0.92) 75%,
+        rgba(15, 26, 48, 0.97) 100%),
+      url('images/hero-van-driveway.jpg') center / cover no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .hero__panel {
+    /* No background of its own — the gradient lives on .hero. The panel is
+       just a positioning + padding wrapper that lives in the dark portion
+       of the gradient. */
+    padding: 56px 24px 48px;
+  }
+  .hero__panel-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: center;
+    text-align: center;
+  }
+  @media (min-width: 880px) {
+    .hero__panel-inner {
+      grid-template-columns: minmax(160px, 240px) 1fr;
+      gap: 40px;
+      text-align: left;
+    }
+  }
+  .hero__logo {
+    width: clamp(150px, 22vw, 220px);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.4));
+  }
+  @media (min-width: 880px) {
+    .hero__logo { margin: 0; }
+  }
+  .hero__content { min-width: 0; }
+  .hero__eyebrow {
+    display: inline-block;
+    background: rgba(251, 191, 36, 0.18);
+    color: var(--yellow);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    border: 1px solid rgba(251, 191, 36, 0.4);
+  }
+  .hero h1 {
+    font-size: clamp(28px, 4.8vw, 48px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 .accent { color: var(--yellow); }
+  .hero__sub {
+    font-size: clamp(15px, 1.7vw, 18px);
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 22px;
+    line-height: 1.5;
+    max-width: 680px;
+  }
+  @media (max-width: 879px) {
+    .hero__sub { margin-left: auto; margin-right: auto; }
+  }
+  .hero__cta-row {
+    display: flex; flex-direction: column; gap: 10px;
+    align-items: center; justify-content: flex-start;
+    margin-bottom: 18px;
+  }
+  @media (min-width: 640px) {
+    .hero__cta-row { flex-direction: row; }
+  }
+  @media (max-width: 879px) {
+    .hero__cta-row { justify-content: center; }
+  }
+  .btn-primary {
+    background: var(--brand);
+    color: #fff;
+    padding: 18px 32px;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    display: inline-flex; align-items: center; gap: 12px;
+    border: none;
+    transition: all 0.2s;
+    box-shadow: 0 10px 30px -8px rgba(0, 112, 60, 0.6);
+    cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: 0 14px 36px -8px rgba(0, 112, 60, 0.75); }
+  .btn-primary .icon { font-size: 22px; }
+  .btn-secondary {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    padding: 18px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid rgba(255,255,255,0.35);
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.18); }
+  .hero__trust {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 18px 24px;
+    margin-top: 22px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+  }
+  .hero__trust span { display: inline-flex; align-items: center; gap: 6px; }
+
+  /* ── SECTION SHELL ── */
+  section { padding: 64px 20px; }
+  .section-inner { max-width: 880px; margin: 0 auto; }
+  .section-inner--wide { max-width: 1080px; }
+  .section-soft { background: var(--bg-soft); }
+  .section-dark { background: var(--navy); color: #fff; }
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--brand);
+    margin-bottom: 14px;
+  }
+  .section-dark .section-eyebrow { color: var(--yellow); }
+  h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--navy);
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+  .section-dark h2 { color: #fff; }
+  h3 {
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 800;
+    color: var(--navy);
+    margin: 22px 0 10px;
+  }
+  p { font-size: 17px; margin-bottom: 16px; line-height: 1.7; color: var(--text); }
+  .section-dark p { color: rgba(255,255,255,0.9); }
+  .lead { font-size: 19px; font-weight: 500; color: var(--text); }
+  .section-dark .lead { color: rgba(255,255,255,0.95); }
+
+  /* ── SALES LETTER OPENER ── */
+  .letter p { font-size: 18px; line-height: 1.75; }
+  .letter p strong { color: var(--navy); }
+  .letter .pull {
+    border-left: 4px solid var(--brand);
+    padding: 14px 22px;
+    background: var(--bg-soft);
+    margin: 28px 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .letter .signature {
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    font-style: italic;
+    color: var(--text-light);
+  }
+  .letter .signature strong { color: var(--navy); font-style: normal; }
+
+  /* ── REPAIR-VS-REPLACE GRID ── */
+  .repair-grid {
+    display: grid; gap: 16px;
+    grid-template-columns: 1fr;
+    margin: 28px 0;
+  }
+  @media (min-width: 700px) { .repair-grid { grid-template-columns: 1fr 1fr; } }
+  .repair-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    box-shadow: 0 4px 14px -8px rgba(15,26,48,0.1);
+  }
+  .repair-card__tag {
+    display: inline-block;
+    background: var(--brand);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .repair-card h4 { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+  .repair-card p { font-size: 15px; line-height: 1.55; margin: 0; }
+
+  /* ── THE WATKINS STANDARD (5 elements) ── */
+  .standard-grid {
+    display: grid; gap: 20px;
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+  @media (min-width: 700px) { .standard-grid { grid-template-columns: 1fr 1fr; } }
+  .standard-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 24px 26px;
+  }
+  .standard-item__num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--navy);
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .standard-item h4 { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+  .standard-item p { color: rgba(255,255,255,0.85); font-size: 15px; line-height: 1.55; margin: 0; }
+
+  /* ── PRICING TRANSPARENCY ── */
+  .pricing-row {
+    display: grid; gap: 18px;
+    grid-template-columns: 1fr;
+    background: #fff;
+    border: 2px solid var(--brand);
+    border-radius: 16px;
+    padding: 28px 26px;
+    margin: 28px 0;
+    box-shadow: 0 10px 28px -14px rgba(0,112,60,0.3);
+  }
+  @media (min-width: 700px) { .pricing-row { grid-template-columns: 1fr 1fr; } }
+  .pricing-row__item h4 { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+  .pricing-row__price { font-size: 30px; font-weight: 900; color: var(--brand); line-height: 1; margin-bottom: 6px; }
+  .pricing-row__price .small { font-size: 14px; color: var(--text-light); font-weight: 500; }
+  .pricing-row__item p { font-size: 14.5px; color: var(--text-light); margin: 0; line-height: 1.5; }
+
+  /* ── WARRANTY ── */
+  .warranty {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    margin: 28px 0;
+    text-align: center;
+  }
+  .warranty h3 { color: var(--yellow); margin-top: 0; }
+  .warranty-cols { display: grid; gap: 18px; grid-template-columns: 1fr; margin-top: 18px; }
+  @media (min-width: 600px) { .warranty-cols { grid-template-columns: 1fr 1fr; } }
+  .warranty-col { background: rgba(255,255,255,0.06); padding: 18px; border-radius: 12px; }
+  .warranty-col strong { display: block; font-size: 22px; color: var(--yellow); font-weight: 900; margin-bottom: 4px; }
+  .warranty-col span { color: rgba(255,255,255,0.85); font-size: 14px; }
+
+  /* ── SOCIAL PROOF ── */
+  .proof-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    text-align: center;
+    margin-top: 22px;
+  }
+  .proof-tile {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 16px;
+  }
+  .proof-tile__num { font-size: 32px; font-weight: 900; color: var(--brand); line-height: 1; }
+  .proof-tile__stars { font-size: 20px; color: var(--yellow); letter-spacing: 2px; }
+  .proof-tile__label { font-size: 13px; color: var(--text-light); margin-top: 6px; font-weight: 600; }
+
+  /* ── FAQ ── */
+  .faq-item {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .faq-item summary {
+    padding: 18px 22px;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 24px;
+    color: var(--brand);
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item__body {
+    padding: 0 22px 18px;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text);
+  }
+
+  /* ── CTA BLOCKS (mid-page + final) ── */
+  .cta-block {
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 40px 28px;
+    text-align: center;
+    margin: 36px 0;
+    box-shadow: 0 20px 40px -16px rgba(0, 112, 60, 0.4);
+  }
+  .cta-block h3 { color: #fff; font-size: clamp(22px, 3vw, 30px); margin-bottom: 12px; }
+  .cta-block p { color: rgba(255,255,255,0.92); margin-bottom: 22px; font-size: 17px; }
+  .cta-block .btn-primary { background: #fff; color: var(--brand); }
+  .cta-block .btn-primary:hover { background: var(--yellow); color: var(--navy); }
+  .cta-block__phone {
+    font-size: 34px;
+    font-weight: 900;
+    color: #fff;
+    display: block;
+    margin: 8px 0;
+    letter-spacing: -0.01em;
+  }
+  .cta-block__small { font-size: 13px; color: rgba(255,255,255,0.8); margin-top: 14px; }
+
+  /* ── RISK REVERSAL ── */
+  .promise {
+    background: #fff;
+    border: 3px solid var(--brand);
+    border-radius: 18px;
+    padding: 32px 28px;
+    margin: 32px 0;
+    text-align: center;
+    position: relative;
+  }
+  .promise__seal {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: var(--brand);
+    color: #fff;
+    font-size: 36px;
+    margin: -64px auto 16px;
+    border: 6px solid #fff;
+  }
+  .promise h3 { color: var(--brand); margin-top: 0; }
+
+  /* ── FORM ── */
+  .quote-form {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 26px;
+    box-shadow: 0 12px 32px -16px rgba(15,26,48,0.18);
+  }
+  .quote-form h3 { margin-top: 0; }
+  .field { display: block; margin-bottom: 14px; }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    transition: border-color 0.15s;
+    background: #fff;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(0,112,60,0.12);
+  }
+  .field textarea { resize: vertical; min-height: 80px; }
+  .form-submit {
+    width: 100%;
+    background: var(--brand);
+    color: #fff;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .form-submit:hover { background: var(--brand-dark); }
+  .form-note { font-size: 12px; color: var(--text-light); margin-top: 10px; text-align: center; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.7);
+    padding: 36px 20px 28px;
+    text-align: center;
+    font-size: 14px;
+  }
+  footer .foot-phone { color: var(--yellow); font-weight: 800; font-size: 22px; display: block; margin-bottom: 8px; }
+  footer .foot-meta { font-size: 12px; margin-top: 14px; line-height: 1.7; }
+  footer .foot-meta a { color: rgba(255,255,255,0.6); text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- ── URGENCY BAR ── -->
+<div class="urgency-bar">
+  <strong>NO HOT WATER?</strong> &nbsp;&middot;&nbsp; Most "dead" water heaters can be repaired &mdash; not replaced. Call before you spend $2,000.
+</div>
+
+<!-- ── STICKY PHONE BAR ── -->
+<div class="stickyphone">
+  <div class="stickyphone__brand">
+    <img src="images/logo-white.png" alt="Watkins Plumbing" />
+    <div class="stickyphone__brand-text">
+      <span>30 years in Chico &middot; CSLB #727962</span>
+    </div>
+  </div>
+  <a href="tel:+15303437770" class="stickyphone__cta">📞 (530) 343-7770</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero__panel">
+    <div class="hero__panel-inner">
+      <img src="images/watkins-logo-vertical-white.png" alt="Watkins Plumbing" class="hero__logo" />
+      <div class="hero__content">
+        <span class="hero__eyebrow">Chico &middot; Oroville &middot; Paradise</span>
+        <h1>If You're About to Replace Your Water Heater, <span class="accent">Read This First.</span></h1>
+        <p class="hero__sub">
+          Most "dead" water heaters in Chico aren't dead. The pilot, the thermocouple, or the pressure valve is &mdash; and a $189 repair beats a $2,400 replacement every time. <strong>We diagnose first. Replace only when we have to.</strong>
+        </p>
+        <div class="hero__cta-row">
+          <a href="tel:+15303437770" class="btn-primary"><span class="icon">📞</span> Call (530) 343-7770</a>
+          <a href="#quote" class="btn-secondary">Get an honest quote</a>
+        </div>
+        <div class="hero__trust">
+          <span>★★★★★ 150+ Google reviews</span>
+          <span>✓ CSLB #727962</span>
+          <span>✓ 1-yr parts &amp; labor</span>
+          <span>✓ No upsell. Period.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SALES LETTER OPENER ── -->
+<section>
+  <div class="section-inner">
+    <span class="section-eyebrow">From the owner</span>
+    <h2>"The plumber on the phone is already quoting you a new heater. Hang up."</h2>
+    <div class="letter">
+      <p class="lead">Cold shower this morning. You're not panicking yet, but you're already running the math in your head.</p>
+
+      <p>A new water heater install in Chico runs <strong>$1,600 to $2,400</strong> for a standard 50-gallon tank. Tankless can hit <strong>$4,500</strong>. Maybe more, depending on the venting and the gas line. And the plumber who shows up &mdash; <em>if</em> you can find one who shows up &mdash; has every incentive to skip the diagnosis and quote you a replacement.</p>
+
+      <p>That's the dirty little secret of the water heater business: <strong>a replacement pays the installer ten times what a $189 repair pays.</strong> So most of them quote replacements.</p>
+
+      <div class="pull">
+        Here's what 30 years of installing water heaters in Chico has taught us:<br/>
+        <strong>most water heaters that "die" aren't dead.</strong>
+      </div>
+
+      <p>They have a bad thermocouple ($45 part). Or a pilot that won't stay lit because the air supply is restricted ($0 fix, 15 minutes). Or a pressure-relief valve that's tripping ($80 part). Or a thermostat that's failed but the tank itself is fine ($120 part).</p>
+
+      <p>None of those need a new water heater. All of them get quoted as "your water heater is finished &mdash; here's a replacement estimate."</p>
+
+      <p><strong>My name is Jerrod Loewen.</strong> I own Watkins Plumbing today. The Watkins van has been on Chico's streets since 1996 &mdash; you've seen the wrap. We don't do unnecessary upsells, we don't bait-and-switch on quote day, and if we diagnose your heater and the repair is the right move, that's what we'll do. If it really is finished, we'll show you why on paper before we talk price.</p>
+
+      <p>If you call us at <a href="tel:+15303437770" style="font-weight:700;">(530) 343-7770</a>, here's what happens next:</p>
+
+      <ol style="margin: 16px 0 22px 22px; font-size: 17px; line-height: 1.75;">
+        <li>We answer the phone. (Not a robot. Not a queue.)</li>
+        <li>We ask three diagnostic questions over the phone &mdash; takes about 90 seconds.</li>
+        <li>If we can fix it remotely (sometimes we can, usually we can't), we'll tell you.</li>
+        <li>If we need to come out, we give you an honest quote before we leave the truck. If something changes once we open the access panel, we stop and re-quote &mdash; we don't run up a surprise.</li>
+        <li>You decide. No pressure.</li>
+      </ol>
+
+      <p>That's the whole pitch. Read on if you want the specifics &mdash; or just hit the green button and let's talk.</p>
+
+      <div class="signature">
+        <strong>Jerrod Loewen</strong><br/>
+        Owner, Watkins Plumbing Inc.<br/>
+        CSLB #727962 &middot; Chico, CA
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REPAIR-VS-REPLACE GRID ── -->
+<section class="section-soft">
+  <div class="section-inner">
+    <span class="section-eyebrow">Why "dead" heaters aren't</span>
+    <h2>4 common water heater problems that look fatal &mdash; and aren't.</h2>
+    <p class="lead">If any of these match your situation, the repair is almost always cheaper than the replacement quote you were about to accept.</p>
+
+    <div class="repair-grid">
+      <div class="repair-card">
+        <span class="repair-card__tag">Repair, not replace</span>
+        <h4>"Pilot light won't stay lit."</h4>
+        <p>Usually a failing thermocouple ($45 part, ~30 minutes) or restricted air supply (free fix). Almost never a sign the tank is finished.</p>
+      </div>
+      <div class="repair-card">
+        <span class="repair-card__tag">Repair, not replace</span>
+        <h4>"Tank is leaking from the top."</h4>
+        <p>Probably a pressure-relief valve discharge ($80 part) or a fitting at the cold-water inlet. Tank leaks from the <em>bottom</em> are the only true death sentence.</p>
+      </div>
+      <div class="repair-card">
+        <span class="repair-card__tag">Repair, not replace</span>
+        <h4>"Water is lukewarm even on hottest setting."</h4>
+        <p>Failed lower thermostat or sediment buildup on the burner. Both are bench-level repairs &mdash; new heater not required.</p>
+      </div>
+      <div class="repair-card">
+        <span class="repair-card__tag">Repair, not replace</span>
+        <h4>"Rumbling or popping noises."</h4>
+        <p>Sediment in the tank. A flush plus an anode rod inspection extends the heater's life by 3-5 years. Replacement is the lazy answer.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 24px; font-size: 16px; color: var(--text-light);"><em>When it really is time to replace: tank leaks from the bottom, the burner chamber is rusted through, the tank is past warranty (typically 8-12 years) and showing two of the symptoms above at once. We'll tell you on the truck &mdash; in writing &mdash; before we recommend the swap.</em></p>
+  </div>
+</section>
+
+<!-- ── MID-PAGE CTA ── -->
+<section style="padding: 20px;">
+  <div class="section-inner">
+    <div class="cta-block">
+      <h3>Cold shower this morning? Stop guessing.</h3>
+      <p>A 5-minute phone diagnostic costs you nothing. A wrong replacement costs you $2,000.</p>
+      <a href="tel:+15303437770" class="btn-primary"><span class="icon">📞</span> Call (530) 343-7770</a>
+      <span class="cta-block__phone">Mon&ndash;Fri, real human, no queue</span>
+      <p class="cta-block__small">After-hours emergency? Leave a voicemail and we call back same evening when possible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE WATKINS STANDARD ── -->
+<section class="section-dark">
+  <div class="section-inner">
+    <span class="section-eyebrow">The Watkins Standard</span>
+    <h2>5 things every Watkins water heater job comes with.</h2>
+    <p class="lead">These aren't promises &mdash; they're how we run every job, on every truck, every day. Verified against Jerrod's word and 30 years of Chico work.</p>
+
+    <div class="standard-grid">
+      <div class="standard-item">
+        <div class="standard-item__num">1</div>
+        <h4>No upsell. Period.</h4>
+        <p>If repair beats replacement, we say so. We don't sell you a heater you don't need.</p>
+      </div>
+      <div class="standard-item">
+        <div class="standard-item__num">2</div>
+        <h4>Honest quote &mdash; before the work.</h4>
+        <p>You see the number before we open the access panel. If anything changes once we're in there, we stop, show you, and re-quote. No surprise bills.</p>
+      </div>
+      <div class="standard-item">
+        <div class="standard-item__num">3</div>
+        <h4>Diagnosed, not guessed.</h4>
+        <p>Camera, gauges, and bench-test where the situation calls for it. We don't shotgun parts.</p>
+      </div>
+      <div class="standard-item">
+        <div class="standard-item__num">4</div>
+        <h4>1-year parts &amp; labor. 5-year parts.</h4>
+        <p>Every install carries our 1-year parts &amp; labor warranty plus a 5-year parts warranty. The Chico install standard.</p>
+      </div>
+      <div class="standard-item">
+        <div class="standard-item__num">5</div>
+        <h4>Clean work area when we leave.</h4>
+        <p>Plastic down. Old tank hauled. Tools out. Your laundry room looks better than when we arrived.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TANK vs TANKLESS ── -->
+<section>
+  <div class="section-inner">
+    <span class="section-eyebrow">Tank or tankless?</span>
+    <h2>The honest read, in three sentences.</h2>
+    <p class="lead">Every plumber will tell you tankless is "better." It isn't &mdash; it's <em>better for some homes.</em> Here's the read.</p>
+
+    <h3>Tank water heater wins when&hellip;</h3>
+    <p>You have 1-3 people in the house, your existing gas line and venting are already sized for tank, and you don't run multiple hot-water demands at once. <strong>Upfront cost: $1,600&ndash;$2,400 installed.</strong> Lifespan 8&ndash;12 years.</p>
+
+    <h3>Tankless wins when&hellip;</h3>
+    <p>You have 4+ people, multiple bathrooms running at once, or you've already burned through 2 tanks in 15 years. <strong>Upfront cost: $3,500&ndash;$5,500 installed</strong> (gas line + venting upgrades usually required). Lifespan 18&ndash;22 years. Math typically wins over 10+ years if you stay in the house.</p>
+
+    <h3>What we'll tell you on the call:</h3>
+    <p>Which one your home is actually set up for, what your gas line can handle, and the real upgrade cost if tankless would require re-piping. We don't push tankless to pad the invoice &mdash; if your tank install will serve you for the next decade, that's what we'll quote.</p>
+  </div>
+</section>
+
+<!-- ── PRICING TRANSPARENCY ── -->
+<section class="section-soft">
+  <div class="section-inner">
+    <span class="section-eyebrow">What it actually costs</span>
+    <h2>Real numbers, not "starting at" lies.</h2>
+    <p class="lead">Most water-heater calls in Chico end in one of three places. Here are the typical price bands. Your call gets a specific quote before any work starts.</p>
+
+    <div class="pricing-row">
+      <div class="pricing-row__item">
+        <h4>Typical diagnostic + repair</h4>
+        <div class="pricing-row__price">~$189 <span class="small">avg</span></div>
+        <p>Pilot, thermocouple, pressure-relief valve, thermostat replacement, sediment flush. Most calls land here.</p>
+      </div>
+      <div class="pricing-row__item">
+        <h4>Tank replacement, installed</h4>
+        <div class="pricing-row__price">$1,600&ndash;$2,400</div>
+        <p>50-gallon standard tank, code-compliant install, old tank haul-away, 1-yr parts &amp; labor warranty.</p>
+      </div>
+    </div>
+
+    <p style="text-align: center; color: var(--text-light); font-size: 15px;">Tankless installs range $3,500&ndash;$5,500 depending on venting + gas line work required. We quote yours specifically.</p>
+  </div>
+</section>
+
+<!-- ── WARRANTY BLOCK ── -->
+<section>
+  <div class="section-inner">
+    <div class="warranty">
+      <span class="section-eyebrow" style="color: var(--yellow);">Warranty on every install</span>
+      <h3>The Chico install standard.</h3>
+      <p style="max-width: 580px; margin: 0 auto;">Every water heater install we do carries the same warranty. No fine print, no per-job changes, no "premium tier" upsell.</p>
+      <div class="warranty-cols">
+        <div class="warranty-col">
+          <strong>1 Year</strong>
+          <span>Parts &amp; labor on every install</span>
+        </div>
+        <div class="warranty-col">
+          <strong>5 Years</strong>
+          <span>Parts coverage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF BAR ── -->
+<section class="section-soft">
+  <div class="section-inner">
+    <span class="section-eyebrow">30 years on Chico's streets</span>
+    <h2>Why people in Chico already call us first.</h2>
+
+    <div class="proof-bar">
+      <div class="proof-tile">
+        <div class="proof-tile__num">30</div>
+        <div class="proof-tile__label">Years in Chico</div>
+      </div>
+      <div class="proof-tile">
+        <div class="proof-tile__stars">★★★★★</div>
+        <div class="proof-tile__label">150+ Google reviews · 4.8 avg</div>
+      </div>
+      <div class="proof-tile">
+        <div class="proof-tile__num">A+</div>
+        <div class="proof-tile__label">BBB rated</div>
+      </div>
+      <div class="proof-tile">
+        <div class="proof-tile__num">#727962</div>
+        <div class="proof-tile__label">CSLB licensed</div>
+      </div>
+    </div>
+
+    <!--
+      TESTIMONIAL SWAP-IN ZONE
+      Don: paste 3 real, verified Google review quotes here. Pull from
+      https://www.google.com/maps?cid=<watkins-place-id> reviews tab.
+      Use first name + last initial only. Do NOT fabricate.
+      Reference rule: feedback_no_fabricated_reviews memory.
+    -->
+  </div>
+</section>
+
+<!-- ── RISK REVERSAL / PROMISE ── -->
+<section>
+  <div class="section-inner">
+    <div class="promise">
+      <div class="promise__seal">✓</div>
+      <h3>The No-Upsell Promise</h3>
+      <p>If we recommend a new heater instead of a repair, we'll show you on paper why the repair wouldn't hold &mdash; before we quote the replacement. If we can fix it for $189 and one trip, we will. That's the whole standard.</p>
+      <p style="font-style: italic; color: var(--text-light); margin-bottom: 0;">&mdash; Jerrod Loewen, owner</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section-soft">
+  <div class="section-inner">
+    <span class="section-eyebrow">Common questions</span>
+    <h2>Before you call, here's what most people ask.</h2>
+
+    <details class="faq-item">
+      <summary>How fast can you get out here?</summary>
+      <div class="faq-item__body">For Chico, Oroville, and Paradise calls, we typically schedule within the week and most of the time we can fit emergency no-hot-water calls in same-week. When you call, tell us the situation and we'll give you a real time window &mdash; not "between 8 and 5."</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What if I get a quote and decide not to do the work?</summary>
+      <div class="faq-item__body">No problem. There's a standard diagnostic trip charge for the truck-roll &mdash; we'll tell you the exact number on the phone when you call so there are no surprises. Most people decide to proceed once they see the quote, because the math is honest.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Will you try to sell me a tankless heater?</summary>
+      <div class="faq-item__body">Only if tankless is actually the right call for your home (4+ people, multiple-bath simultaneous demand, willing to invest in the upfront cost for the 10+ year payback). If a standard tank install is what your home needs, we'll quote a tank install. No upsell. Period.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Are you licensed and insured?</summary>
+      <div class="faq-item__body">Yes. CSLB License #727962, fully insured, and we've been operating in Chico since 1996. We'll show you the certificate on request.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What areas do you serve?</summary>
+      <div class="faq-item__body">Chico, Oroville, Paradise, Magalia, Durham, and the surrounding Butte County area. If you're outside that radius, call us anyway &mdash; we'll tell you straight whether we're a fit for the trip.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What happens to the old heater?</summary>
+      <div class="faq-item__body">We haul it away and dispose of it properly &mdash; included in every install. You don't have to deal with the disposal. We also leave the work area cleaner than we found it.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you carry parts on the truck?</summary>
+      <div class="faq-item__body">We carry the most common water heater repair parts &mdash; thermocouples, pilot assemblies, pressure-relief valves, thermostats, and standard fittings. That means most repairs happen on the same visit, not a second trip a week later. For a tank or tankless install, we order the unit and schedule install once it arrives (usually 2-5 business days).</div>
+    </details>
+  </div>
+</section>
+
+<!-- ── FINAL CTA + FORM ── -->
+<section id="quote" class="section-dark">
+  <div class="section-inner section-inner--wide" style="display: grid; gap: 32px; grid-template-columns: 1fr;">
+    <div>
+      <span class="section-eyebrow">Get an honest quote</span>
+      <h2>Two ways to get answers in the next 24 hours.</h2>
+      <p class="lead">Call us &mdash; the fastest path &mdash; or fill out the form and we'll get back to you the same business day with a quote range and a service window.</p>
+
+      <div class="cta-block" style="margin: 24px 0; background: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%); color: var(--navy);">
+        <h3 style="color: var(--navy);">📞 Call now &mdash; the fastest path</h3>
+        <span class="cta-block__phone" style="color: var(--navy);">(530) 343-7770</span>
+        <p style="color: rgba(27,42,74,0.85);">Mon&ndash;Fri, real human. 90-second phone diagnostic. Free.</p>
+        <a href="tel:+15303437770" class="btn-primary" style="background: var(--navy); color: #fff;"><span class="icon">📞</span> Tap to call</a>
+      </div>
+    </div>
+
+    <div>
+      <form class="quote-form" name="water-heater-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="water-heater-quote" />
+        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+        <h3 style="color: var(--navy);">Or get a quote by form</h3>
+        <p style="color: var(--text-light); margin-bottom: 22px; font-size: 14px;">Same-day response. No spam, no follow-up sales loop &mdash; just a quote and a service window.</p>
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <select id="city" name="city" required>
+            <option value="">Select…</option>
+            <option>Chico</option>
+            <option>Oroville</option>
+            <option>Paradise</option>
+            <option>Magalia</option>
+            <option>Durham</option>
+            <option>Other (please specify in notes)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="situation">What's happening?</label>
+          <select id="situation" name="situation" required>
+            <option value="">Select…</option>
+            <option>No hot water at all</option>
+            <option>Lukewarm — won't get hot</option>
+            <option>Leaking</option>
+            <option>Pilot won't stay lit</option>
+            <option>Rumbling / popping noises</option>
+            <option>Heater is old, want a quote on replacement</option>
+            <option>Interested in tankless</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="notes">Anything else? (Optional)</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Get my honest quote →</button>
+        <p class="form-note">We respond same business day. No spam, no sales follow-up loop. Your info stays with Watkins.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span class="foot-phone">📞 (530) 343-7770</span>
+  <div>Watkins Plumbing Inc. &middot; Chico, CA &middot; CSLB #727962</div>
+  <div class="foot-meta">
+    Serving Chico, Oroville, Paradise, Magalia, Durham &amp; surrounding Butte County.<br/>
+    30 years in Chico &middot; 1-year parts &amp; labor on every install &middot; No upsell. Period.<br/>
+    Designed &amp; built by <a href="https://truexpanse.com" target="_blank" rel="noopener">TrueXpanse</a>.
+  </div>
+</footer>
+
+</body>
+</html>
