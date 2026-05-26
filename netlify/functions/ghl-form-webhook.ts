@@ -14,10 +14,12 @@
  * Always returns 200 so Netlify does not retry — failures are logged.
  *
  * Env required (set in Netlify dashboard → site → Environment variables):
- *   GHL_LOCATION_ID    -> 1dTrjj0yl7CJc5WOZcUk
- *   GHL_LOCATION_PIT   -> pit-… (Watkins per-location PIT from MAT's
- *                          ghl_client_configs; must have contacts.write +
- *                          tags + customFields scopes — already verified)
+ *   GHL_LOCATION_ID         -> 1dTrjj0yl7CJc5WOZcUk
+ *   GHL_LOCATION_PIT        -> pit-… (Watkins per-location PIT from MAT's
+ *                               ghl_client_configs; has contacts.write +
+ *                               tags + customFields + opportunities.write)
+ *   GHL_PIPELINE_ID         -> iB9LNI6YJhNDmbI3B02n (Sales Pipeline)
+ *   GHL_PIPELINE_STAGE_NEW  -> 53d879a6-…  (New Lead stage)
  *
  * Webhook setup (one-time per site):
  *   netlify api createHookBySiteId --data '{
@@ -216,12 +218,58 @@ export const handler = async (event: { httpMethod: string; body: string | null }
       }
     }
 
+    // Create an opportunity in the Sales Pipeline → New Lead stage so
+    // Jerrod can work the lead from the Opportunities board (with stage
+    // changes that later feed Google Ads offline conversion import).
+    const pipelineId = process.env.GHL_PIPELINE_ID;
+    const stageNewId = process.env.GHL_PIPELINE_STAGE_NEW;
+    let opportunityId: string | null = null;
+    if (pipelineId && stageNewId && json.contact?.id) {
+      try {
+        const oppName = [
+          firstName || phone,
+          situation ? `— ${situation}` : "— Water Heater",
+          city ? `(${city})` : "",
+        ].filter(Boolean).join(" ").trim();
+
+        const oppRes = await fetch(`${GHL_BASE}/opportunities/`, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${pit}`,
+            Version: GHL_VERSION,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            locationId,
+            pipelineId,
+            pipelineStageId: stageNewId,
+            name: oppName.substring(0, 100),
+            status: "open",
+            contactId: json.contact.id,
+            source: gclid ? "Google Ads" : "Website Form",
+          }),
+        });
+        if (oppRes.ok) {
+          const oppJson = (await oppRes.json()) as { opportunity?: { id?: string } };
+          opportunityId = oppJson.opportunity?.id || null;
+        } else {
+          console.warn(
+            `[ghl-form-webhook] opportunity create failed for ${phone}: ${oppRes.status} ${await oppRes.text()}`
+          );
+        }
+      } catch (e) {
+        console.warn(`[ghl-form-webhook] opportunity create exception for ${phone}:`, e);
+      }
+    }
+
     console.log(
-      `[ghl-form-webhook] upserted phone=${phone} contactId=${json.contact?.id} form=${formName} new=${json.new ?? false} tags=${tags.join(",")}`
+      `[ghl-form-webhook] upserted phone=${phone} contactId=${json.contact?.id} oppId=${opportunityId} form=${formName} new=${json.new ?? false} tags=${tags.join(",")}`
     );
     return ok({
       ok: true,
       contactId: json.contact?.id,
+      opportunityId,
       isNew: json.new ?? null,
       formName,
       tags,
