@@ -874,6 +874,15 @@
         <input type="hidden" name="form-name" value="water-heater-quote" />
         <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
 
+        <!-- Google Ads attribution — populated by JS at bottom of page from URL params -->
+        <input type="hidden" name="gclid" id="f_gclid" value="" />
+        <input type="hidden" name="utm_source" id="f_utm_source" value="" />
+        <input type="hidden" name="utm_medium" id="f_utm_medium" value="" />
+        <input type="hidden" name="utm_campaign" id="f_utm_campaign" value="" />
+        <input type="hidden" name="ad_group" id="f_ad_group" value="" />
+        <input type="hidden" name="keyword" id="f_keyword" value="" />
+        <input type="hidden" name="landing_page_url" id="f_landing_page_url" value="" />
+
         <h3 style="color: var(--navy);">Or get a quote by form</h3>
         <p style="color: var(--text-light); margin-bottom: 22px; font-size: 14px;">Same-day response. No spam, no follow-up sales loop &mdash; just a quote and a service window.</p>
 
@@ -932,6 +941,58 @@
     Designed &amp; built by <a href="https://truexpanse.com" target="_blank" rel="noopener">TrueXpanse</a>.
   </div>
 </footer>
+
+<!-- Google Ads attribution capture — populates hidden form inputs from URL params.
+     Persists gclid + utm_* in sessionStorage so direct returns within the same
+     browser session still attribute correctly. 30-day persistence via localStorage
+     for the gclid (Google Ads default attribution window). -->
+<script>
+(function(){
+  try {
+    var qs = new URLSearchParams(window.location.search);
+    var ATTRIB_KEYS = ['gclid','utm_source','utm_medium','utm_campaign','ad_group','keyword'];
+    var GCLID_TTL_DAYS = 30;
+
+    // Capture from URL → write to localStorage with timestamp
+    ATTRIB_KEYS.forEach(function(k){
+      var v = qs.get(k);
+      if (v) {
+        try { localStorage.setItem('wp_attrib_' + k, v); } catch(e){}
+        try { localStorage.setItem('wp_attrib_' + k + '_ts', String(Date.now())); } catch(e){}
+      }
+    });
+
+    // Read back, applying 30-day expiry to gclid
+    function readAttrib(k){
+      try {
+        var v = localStorage.getItem('wp_attrib_' + k);
+        if (!v) return '';
+        if (k === 'gclid') {
+          var ts = parseInt(localStorage.getItem('wp_attrib_' + k + '_ts') || '0', 10);
+          if (Date.now() - ts > GCLID_TTL_DAYS * 86400000) return '';
+        }
+        return v;
+      } catch(e) { return ''; }
+    }
+
+    function setField(id, val){
+      var el = document.getElementById(id);
+      if (el) el.value = val || '';
+    }
+
+    setField('f_gclid',           readAttrib('gclid'));
+    setField('f_utm_source',      readAttrib('utm_source'));
+    setField('f_utm_medium',      readAttrib('utm_medium'));
+    setField('f_utm_campaign',    readAttrib('utm_campaign'));
+    setField('f_ad_group',        readAttrib('ad_group'));
+    setField('f_keyword',         readAttrib('keyword'));
+    setField('f_landing_page_url', window.location.origin + window.location.pathname);
+  } catch (e) {
+    // Never block the form on attribution errors
+    console.warn('[wp-attrib] capture failed', e);
+  }
+})();
+</script>
 
 </body>
 </html>
