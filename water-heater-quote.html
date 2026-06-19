@@ -222,6 +222,30 @@
   }
   .hero__trust span { display: inline-flex; align-items: center; gap: 6px; }
 
+  /* ── FREE GUIDE (hero lead magnet) ── */
+  .hero__guide {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(251,191,36,0.14);
+    border: 1.5px solid var(--yellow);
+    color: var(--yellow);
+    font-weight: 800; font-size: 15px; line-height: 1.25;
+    padding: 13px 22px; border-radius: 12px;
+    cursor: pointer; font-family: inherit; text-align: left;
+    transition: all .2s;
+  }
+  .hero__guide:hover { background: rgba(251,191,36,0.26); transform: translateY(-1px); }
+  .lm-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(15,26,48,0.72); display: none; align-items: center; justify-content: center; padding: 20px; }
+  .lm-overlay.open { display: flex; }
+  .lm-modal { background: #fff; border-radius: 16px; max-width: 440px; width: 100%; padding: 30px 28px; position: relative; box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+  .lm-modal h3 { color: var(--navy); font-size: 22px; margin: 0 0 6px; }
+  .lm-modal > p { font-size: 14px; color: var(--text-light); margin-bottom: 18px; }
+  .lm-close { position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 28px; color: var(--text-light); cursor: pointer; line-height: 1; }
+  .lm-cover { display: flex; gap: 12px; align-items: center; background: var(--bg-soft); border-radius: 10px; padding: 12px 14px; margin-bottom: 16px; }
+  .lm-cover .ic { font-size: 30px; }
+  .lm-cover strong { color: var(--navy); font-size: 14px; display: block; line-height: 1.25; }
+  .lm-cover span { font-size: 12px; color: var(--text-light); }
+  .lm-thanks { display: none; text-align: center; color: var(--brand); font-weight: 700; padding: 12px 0; }
+
   /* ── SECTION SHELL ── */
   section { padding: 64px 20px; }
   .section-inner { max-width: 880px; margin: 0 auto; }
@@ -563,8 +587,9 @@
           <a href="tel:+15303437770" class="btn-primary"><span class="icon">📞</span> Call (530) 343-7770</a>
           <a href="#quote" class="btn-secondary">Get an honest quote</a>
         </div>
+        <button type="button" class="hero__guide" onclick="openGuide()">📘&nbsp; FREE GUIDE: Top Water Heater Brands (2026) — instant download</button>
         <div class="hero__trust">
-          <span>★★★★★ 150+ Google reviews</span>
+          <span>★★★★★ 184 Google reviews · 4.7 avg</span>
           <span>✓ CSLB #727962</span>
           <span>✓ 1-yr parts &amp; labor</span>
           <span>✓ No upsell. Period.</span>
@@ -776,7 +801,7 @@
       </div>
       <div class="proof-tile">
         <div class="proof-tile__stars">★★★★★</div>
-        <div class="proof-tile__label">150+ Google reviews · 4.8 avg</div>
+        <div class="proof-tile__label">184 Google reviews · 4.7 avg</div>
       </div>
       <div class="proof-tile">
         <div class="proof-tile__num">A+</div>
@@ -941,6 +966,50 @@
     Designed &amp; built by <a href="https://truexpanse.com" target="_blank" rel="noopener">TrueXpanse</a>.
   </div>
 </footer>
+
+<!-- ── FREE GUIDE LEAD-MAGNET MODAL ── -->
+<div class="lm-overlay" id="guideModal">
+  <div class="lm-modal">
+    <button class="lm-close" onclick="closeGuide()" aria-label="Close">×</button>
+    <div class="lm-cover">
+      <div class="ic">📘</div>
+      <div><strong>The 2026 Chico Water Heater Buying Guide</strong><span>Top brands · tank vs tankless · real costs · red flags</span></div>
+    </div>
+    <h3>Where should we send it?</h3>
+    <p>Get the free guide instantly. No spam, no sales loop — that's the Watkins way.</p>
+    <form name="water-heater-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="guideForm">
+      <input type="hidden" name="form-name" value="water-heater-guide" />
+      <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+      <input type="hidden" name="gclid" id="g_gclid" value="" />
+      <input type="hidden" name="utm_campaign" id="g_utm_campaign" value="" />
+      <div class="field"><label for="g_email">Email</label><input type="email" id="g_email" name="email" required autocomplete="email" /></div>
+      <div class="field"><label for="g_phone">Phone (optional — for a faster quote)</label><input type="tel" id="g_phone" name="phone" autocomplete="tel" /></div>
+      <button type="submit" class="form-submit">📥 Send Me the Free Guide</button>
+      <p class="form-note">Instant download. Your info stays with Watkins.</p>
+    </form>
+    <div class="lm-thanks" id="guideThanks">✓ On its way — your download is opening now.</div>
+  </div>
+</div>
+<script>
+  function openGuide(){ document.getElementById('guideModal').classList.add('open'); }
+  function closeGuide(){ document.getElementById('guideModal').classList.remove('open'); }
+  (function(){
+    var m = document.getElementById('guideModal');
+    m.addEventListener('click', function(e){ if(e.target===m) closeGuide(); });
+    try {
+      document.getElementById('g_gclid').value = localStorage.getItem('wp_attrib_gclid') || '';
+      document.getElementById('g_utm_campaign').value = localStorage.getItem('wp_attrib_utm_campaign') || '';
+    } catch(e){}
+    document.getElementById('guideForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var f = e.target, data = new URLSearchParams(new FormData(f)).toString();
+      fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:data }).catch(function(){});
+      window.open('water-heater-buying-guide.pdf', '_blank');
+      f.style.display = 'none';
+      document.getElementById('guideThanks').style.display = 'block';
+    });
+  })();
+</script>
 
 <!-- Google Ads attribution capture — populates hidden form inputs from URL params.
      Persists gclid + utm_* in sessionStorage so direct returns within the same
