@@ -146,6 +146,12 @@
     .hv2-scrim::after { content:''; position:absolute; left:0; right:0; bottom:0; height:38%;
       background: linear-gradient(to top, rgba(10,12,11,.92), transparent); }
     .hv2-wrap { position: relative; z-index: 3; width: min(1240px, 92%); margin: 0 auto; padding: 96px 0 150px; }
+    .hv2-inner { max-width: 640px; }
+    @media (max-width: 720px) {
+      /* phone: image shows its center band; vertical scrim keeps the headline
+         readable regardless of what sits behind it */
+      .hv2-scrim { background: linear-gradient(to bottom, rgba(10,12,11,.82) 0%, rgba(10,12,11,.55) 45%, rgba(10,12,11,.38) 65%, rgba(10,12,11,.88) 100%); }
+    }
     .hv2-eyebrow { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; letter-spacing: 3.5px;
       color: #d9a441; margin-bottom: 20px; }
     .hv2-eyebrow::before { content: ''; width: 44px; height: 1.5px; background: #d9a441; }
@@ -196,9 +202,10 @@
     }
   </style>
   <section class="hv2">
-    <div class="hv2-bg" style="background-image:url('images/hero-video-poster.jpg?v=5')" aria-hidden="true"></div>
+    <div class="hv2-bg" style="background-image:url('images/hero-video-poster.jpg?v=6')" aria-hidden="true"></div>
     <div class="hv2-scrim"></div>
     <div class="hv2-wrap">
+      <div class="hv2-inner">
       <div class="hv2-eyebrow hv2-rise hv2-d1">CHICO &middot; OROVILLE &middot; PARADISE</div>
       <a href="#contact" class="hv2-chip hv2-rise hv2-d2"><span class="hv2-dot"></span>$99 DIAGNOSTIC &mdash; CREDITED TOWARD YOUR REPAIR</a>
       <h1 class="hv2-rise hv2-d3">Cold shower this morning? <span class="hv2-gold">Hot water by tonight.</span></h1>
@@ -210,6 +217,7 @@
           <span>(530) 343-7770<small>TAP TO CALL &mdash; 24/7</small></span>
         </a>
         <a class="hv2-book" href="#contact">Book online &rarr;</a>
+      </div>
       </div>
     </div>
     <div class="hv2-ledge hv2-rise hv2-d5">
