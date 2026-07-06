@@ -134,29 +134,93 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" style="background-image: url('images/hero-van-driveway.jpg');">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-content hero-content--full">
-        <div class="hero-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          Licensed &amp; Insured &bull; CA #727962 &bull; Since 1996
-        </div>
-        <h1>Chico's #1 Trusted<br><span style="-webkit-text-fill-color: var(--green-400);">Plumber &amp; Drain Experts</span></h1>
-        <a href="#contact" class="hero-offer hero-offer--cta">$99 EXPERT DIAGNOSTIC &nbsp;|&nbsp; CREDITED TOWARD YOUR REPAIR &nbsp;|&nbsp; SAME-DAY SERVICE</a>
-        <div class="hero-trust-row hero-trust-row--compact">
-          <div class="hero-stat-mini">
-            <span class="mini-num">25+</span> Years Serving Butte County
-          </div>
-          <div class="hero-stat-mini">
-            <a href="https://search.google.com/local/writereview?placeid=ChIJg8O3hbm2nIAR4I8ZdkDISyM" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;"><span class="mini-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="mini-num">4.8</span> &bull; 150+ Google Reviews</a>
-          </div>
-          <div class="hero-stat-mini">
-            <span class="status-dot"></span> Available Now
-          </div>
-        </div>
+  <!-- HERO — video hero (approved by Don 2026-07-06): real branded van in motion,
+       cream/gold/van-red on ink. All CTAs preserved: tel + #contact (lead form). -->
+  <style>
+    .hv2 { position: relative; min-height: 92vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center;
+      background: #0c0e0d; border-top: 3px solid transparent;
+      border-image: linear-gradient(90deg, transparent, #d9a441 20%, #d9a441 80%, transparent) 1; }
+    .hv2 video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hv2-scrim { position: absolute; inset: 0;
+      background: linear-gradient(97deg, rgba(10,12,11,.93) 0%, rgba(10,12,11,.82) 34%, rgba(10,12,11,.34) 68%, rgba(10,12,11,.55) 100%); }
+    .hv2-scrim::after { content:''; position:absolute; left:0; right:0; bottom:0; height:38%;
+      background: linear-gradient(to top, rgba(10,12,11,.92), transparent); }
+    .hv2-wrap { position: relative; z-index: 3; width: min(1240px, 92%); margin: 0 auto; padding: 96px 0 150px; }
+    .hv2-eyebrow { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; letter-spacing: 3.5px;
+      color: #d9a441; margin-bottom: 20px; }
+    .hv2-eyebrow::before { content: ''; width: 44px; height: 1.5px; background: #d9a441; }
+    .hv2-chip { display: inline-flex; align-items: center; gap: 10px; width: fit-content; max-width: 100%;
+      background: rgba(0,112,60,.94); border: 1px solid rgba(246,239,225,.25); border-radius: 999px; text-decoration: none;
+      padding: 10px 20px; font-size: 14.5px; font-weight: 800; letter-spacing: .4px; margin-bottom: 24px; color: #fff; }
+    .hv2-chip .hv2-dot { width: 9px; height: 9px; border-radius: 50%; background: #8ff0b4; animation: hv2pulse 1.8s infinite; }
+    @keyframes hv2pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(143,240,180,.7); } 55% { box-shadow: 0 0 0 9px rgba(143,240,180,0); } }
+    .hv2 h1 { font-family: 'Iowan Old Style', 'Palatino', Georgia, 'Times New Roman', serif;
+      font-size: clamp(44px, 6.2vw, 88px); line-height: 1.02; font-weight: 700; letter-spacing: -.5px;
+      color: #f6efe1; max-width: 14ch; -webkit-text-fill-color: initial; background: none; }
+    .hv2 h1 .hv2-gold { color: #d9a441; font-style: italic; }
+    .hv2-sub { margin-top: 20px; font-size: clamp(16px, 1.5vw, 20px); color: rgba(246,239,225,.85); max-width: 54ch; line-height: 1.55; }
+    .hv2-sub b { color: #f6efe1; }
+    .hv2-ctas { display: flex; gap: 16px; margin-top: 34px; flex-wrap: wrap; align-items: center; }
+    .hv2-call { display: inline-flex; align-items: center; gap: 12px; background: #a8232b; color: #fff;
+      font-size: 21px; font-weight: 900; padding: 18px 34px; border-radius: 14px; text-decoration: none;
+      box-shadow: 0 10px 36px rgba(168,35,43,.45); transition: all .18s; }
+    .hv2-call:hover { background: #c62a33; transform: translateY(-2px); }
+    .hv2-call small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; opacity: .85; }
+    .hv2-book { color: #f6efe1; font-size: 16.5px; font-weight: 700; text-decoration: none;
+      border: 1.5px solid rgba(246,239,225,.45); padding: 17px 28px; border-radius: 14px; transition: all .15s; }
+    .hv2-book:hover { border-color: #d9a441; color: #d9a441; }
+    .hv2-ledge { position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; display: flex;
+      background: rgba(12,14,13,.72); backdrop-filter: blur(10px); border-top: 1px solid rgba(217,164,65,.35); }
+    .hv2-cell { flex: 1; padding: 16px 28px; border-right: 1px solid rgba(246,239,225,.09); text-decoration: none; }
+    .hv2-cell:last-child { border-right: none; }
+    .hv2-big { font-size: 20px; font-weight: 900; color: #f6efe1; }
+    .hv2-big .hv2-star { color: #d9a441; }
+    .hv2-small { font-size: 11.5px; font-weight: 600; letter-spacing: 1.6px; color: rgba(246,239,225,.55); text-transform: uppercase; margin-top: 2px; }
+    .hv2-rise { opacity: 0; transform: translateY(22px); animation: hv2rise .7s cubic-bezier(.2,.7,.3,1) forwards; }
+    .hv2-d1 { animation-delay: .08s; } .hv2-d2 { animation-delay: .2s; } .hv2-d3 { animation-delay: .34s; }
+    .hv2-d4 { animation-delay: .5s; } .hv2-d5 { animation-delay: .66s; }
+    @keyframes hv2rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .hv2-rise { animation: none; opacity: 1; transform: none; } .hv2-chip .hv2-dot { animation: none; } }
+    @media (max-width: 720px) {
+      .hv2-wrap { width: 100%; padding: 72px 18px 170px; }
+      .hv2-chip { font-size: 12px; letter-spacing: .2px; padding: 8px 14px; }
+      .hv2-eyebrow { font-size: 11.5px; letter-spacing: 2.5px; }
+      .hv2 h1 { font-size: 42px; }
+      .hv2-sub { font-size: 15.5px; }
+      .hv2-ctas { flex-direction: column; align-items: stretch; }
+      .hv2-call { justify-content: center; font-size: 19px; }
+      .hv2-book { text-align: center; }
+      .hv2-ledge { flex-wrap: wrap; }
+      .hv2-cell { flex: 1 1 50%; padding: 11px 16px; }
+      .hv2-cell:nth-child(3) { display: none; }
+    }
+  </style>
+  <section class="hv2">
+    <video autoplay muted loop playsinline preload="metadata" poster="images/hero-video-poster.jpg" width="1280" height="720" aria-hidden="true">
+      <source src="videos/hero-van.mp4" type="video/mp4">
+    </video>
+    <div class="hv2-scrim"></div>
+    <div class="hv2-wrap">
+      <div class="hv2-eyebrow hv2-rise hv2-d1">CHICO &middot; OROVILLE &middot; PARADISE</div>
+      <a href="#contact" class="hv2-chip hv2-rise hv2-d2"><span class="hv2-dot"></span>$99 DIAGNOSTIC &mdash; CREDITED TOWARD YOUR REPAIR</a>
+      <h1 class="hv2-rise hv2-d3">Cold shower this morning? <span class="hv2-gold">Hot water by tonight.</span></h1>
+      <p class="hv2-sub hv2-rise hv2-d4">Same-day water heater repair &amp; replacement. <b>No trip fees, no mystery charges</b> &mdash;
+        just a licensed Chico plumber who shows up when we say we will. It's how we've done it in Butte County for 25+ years.</p>
+      <div class="hv2-ctas hv2-rise hv2-d5">
+        <a class="hv2-call" href="tel:5303437770">
+          <span style="font-size:26px">&#128222;</span>
+          <span>(530) 343-7770<small>TAP TO CALL &mdash; 24/7</small></span>
+        </a>
+        <a class="hv2-book" href="#contact">Book online &rarr;</a>
       </div>
+    </div>
+    <div class="hv2-ledge hv2-rise hv2-d5">
+      <a class="hv2-cell" href="https://search.google.com/local/writereview?placeid=ChIJg8O3hbm2nIAR4I8ZdkDISyM" target="_blank" rel="noopener">
+        <div class="hv2-big"><span class="hv2-star">&#9733;</span> 4.8 / 5</div><div class="hv2-small">150+ Google Reviews</div>
+      </a>
+      <div class="hv2-cell"><div class="hv2-big">25+ Years</div><div class="hv2-small">Serving Butte County</div></div>
+      <div class="hv2-cell"><div class="hv2-big">Same-Day</div><div class="hv2-small">Water Heater Service</div></div>
+      <div class="hv2-cell"><div class="hv2-big">CSLB #727962</div><div class="hv2-small">Licensed &amp; Insured</div></div>
     </div>
   </section>
 
