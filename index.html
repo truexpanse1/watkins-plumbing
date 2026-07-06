@@ -140,7 +140,7 @@
     .hv2 { position: relative; min-height: 92vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center;
       background: #0c0e0d; border-top: 3px solid transparent;
       border-image: linear-gradient(90deg, transparent, #d9a441 20%, #d9a441 80%, transparent) 1; }
-    .hv2 video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hv2-bg { position: absolute; inset: 0; background-size: cover; background-position: center 60%; }
     .hv2-scrim { position: absolute; inset: 0;
       background: linear-gradient(97deg, rgba(10,12,11,.93) 0%, rgba(10,12,11,.82) 34%, rgba(10,12,11,.34) 68%, rgba(10,12,11,.55) 100%); }
     .hv2-scrim::after { content:''; position:absolute; left:0; right:0; bottom:0; height:38%;
@@ -196,9 +196,7 @@
     }
   </style>
   <section class="hv2">
-    <video autoplay muted loop playsinline preload="metadata" poster="images/hero-video-poster.jpg" width="1280" height="720" aria-hidden="true">
-      <source src="videos/hero-van.mp4" type="video/mp4">
-    </video>
+    <div class="hv2-bg" style="background-image:url('images/hero-video-poster.jpg?v=2')" aria-hidden="true"></div>
     <div class="hv2-scrim"></div>
     <div class="hv2-wrap">
       <div class="hv2-eyebrow hv2-rise hv2-d1">CHICO &middot; OROVILLE &middot; PARADISE</div>
